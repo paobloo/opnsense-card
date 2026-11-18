@@ -1,5 +1,5 @@
 <p>
-  ☕ <strong>Si cette carte vous est utile, vous pouvez soutenir le projet :</strong>
+  ☕ <strong>If you find this card useful, you can support the project:</strong>
 </p>
 
 <div style="white-space: nowrap; line-height: 0;">
@@ -9,8 +9,8 @@
     rel="noopener noreferrer"
     style="display: inline-block; text-decoration: none; vertical-align: middle;"
   ><img
-    src="https://img.buymeacoffee.com/button-api/?text=Offrir%20un%20caf%C3%A9&emoji=%E2%98%95&slug=Marlboro62&button_colour=FF5F5F&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
-    alt="Offrir un café sur Buy Me a Coffee"
+    src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=%E2%98%95&slug=Marlboro62&button_colour=FF5F5F&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
+    alt="Buy me a coffee on Buy Me a Coffee"
     height="45"
     style="display: block; border: 0;"
   ></a>&nbsp;&nbsp;<a
@@ -20,145 +20,145 @@
     style="display: inline-block; text-decoration: none; vertical-align: middle;"
   ><img
     src="https://storage.ko-fi.com/cdn/kofi6.png?v=6"
-    alt="Soutenir le projet sur Ko-fi"
+    alt="Support the project on Ko-fi"
     height="45"
     style="display: block; border: 0;"
   ></a>
 </div>
 
-# Carte OPNsense
+# OPNsense Card
 
 [![HACS Default](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://hacs.xyz/)
 [![Release](https://img.shields.io/github/v/release/Marlboro62/opnsense-card)](https://github.com/Marlboro62/opnsense-card/releases)
 
-Carte Lovelace pour suivre un pare-feu **OPNsense** dans Home Assistant : passerelles, débits des interfaces, ressources, mise à jour, redémarrage. Elle a le style des cartes MyElectricalData new ([Carte Enedis Linky New](https://github.com/Marlboro62/content-card-linky-new)) et des [Cartes Serveur HA](https://github.com/Marlboro62/serveur-ha-card) : thème bleu nuit, version claire, ou thème Home Assistant.
+Lovelace card for monitoring a firewall **OPNsense** to Home Assistant : gateways, interface traffic, resources, updates, and reboot. It has the same style as the MyElectricalData new ([Carte Enedis Linky New](https://github.com/Marlboro62/content-card-linky-new)) et des [Cartes Serveur HA](https://github.com/Marlboro62/serveur-ha-card) : midnight blue theme, light version, or Home Assistant theme.
 
-**Aucune dépendance** : pas de button-card ni de card-mod. Les capteurs sont **détectés automatiquement**, et chaque élément sans capteur est simplement masqué.
+**No dependencies** : pas de button-card ni de card-mod. Sensors are **detected automatically**, and any element without a sensor is simply hidden.
 
-| Normal | Chargé, mise à jour | WAN hors ligne |
+| Normal | Under load, update available | WAN offline |
 | --- | --- | --- |
-| ![OPNsense](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense.png) | ![OPNsense chargé](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-charge.png) | ![WAN hors ligne](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-wan.png) |
+| ![OPNsense](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense.png) | ![OPNsense under load](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-charge.png) | ![WAN offline](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-wan.png) |
 
-| Clair, sur PC | Sans intégration (package REST) |
+| Light, on PC | Without integration (REST package) |
 | --- | --- |
-| ![OPNsense clair](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-clair.png) | ![Package REST](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-rest.png) |
+| ![OPNsense light](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-clair.png) | ![Package REST](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/images/opnsense-rest.png) |
 
-*Aperçus réalisés avec la démo et des valeurs fictives (noms, adresses IP et débits inventés).*
+*Previews created using the demo and fictional values (invented names, IP addresses, and traffic rates).*
 
-**[▶ Essayer la démo en ligne](https://marlboro62.github.io/opnsense-card/docs/demo.html)** : pare-feu normal, chargé avec une mise à jour, ou WAN hors ligne, avec l'intégration ou le package REST, en sombre ou clair, sur téléphone ou PC.
+**[▶ Try the online demo](https://marlboro62.github.io/opnsense-card/docs/demo.html)** : pare-feu normal, chargé avec une mise à jour, ou WAN offline, avec l'intégration ou le package REST, en sombre ou clair, sur téléphone ou PC.
 
-## Ce qu'elle affiche
+## What it displays
 
-- **En-tête** : nom et version, état d'Internet, voyants **Passerelles** (rouge si une passerelle est hors ligne), **Mise à jour** et **Alertes** (notifications en attente dans OPNsense). La carte prend une bordure rouge quand une passerelle tombe.
-- **Informations** : uptime, version installée ou disponible, baux DHCP, charge du processeur.
-- **Ressources** : CPU, RAM (utilisée / totale), disque, table d'états pf, tampons réseau (mbuf), swap, et les températures remontées par OPNsense.
-- **Passerelles** : état en français (en ligne, latence, pertes, hors ligne), latence, pertes et gigue, le WAN en premier.
-- **Interfaces** : débit reçu et envoyé de chaque interface, en kbit/s, Mbit/s ou Gbit/s, et interface déconnectée en rouge.
-- **Actions** : **Redémarrer** et **Arrêter** le pare-feu, avec **un second clic dans les 5 secondes** pour confirmer.
+- **Header** : name and version, Internet status, indicators **Gateways** (red if a gateway is offline), **Update** et **Alerts** (pending notifications in OPNsense). The card gets a red border when a gateway goes down.
+- **Information** : uptime, installed or available version, baux DHCP, CPU load.
+- **Resources** : CPU, RAM (used / total), disk, pf state table, network buffers (mbuf), swap, and temperatures reported by OPNsense.
+- **Gateways** : status (online, latency, packet loss, offline), latency, packet loss, and jitter, with WAN first.
+- **Interfaces** : receive and transmit rate for each interface, en kbit/s, Mbit/s ou Gbit/s, and disconnected interfaces shown in red.
+- **Actions** : **Reboot** et **Shut down** the firewall; **a second click within 5 seconds** is required to confirm.
 
-Un clic sur un élément ouvre la fiche de l'entité dans Home Assistant.
+Clicking an element opens the entity details in Home Assistant.
 
-## Deux façons d'obtenir les données
+## Two ways to obtain the data
 
-| | Intégration OPNsense (HACS) | Package REST, sans intégration |
+| | OPNsense integration (HACS) | REST package, without integration |
 | --- | --- | --- |
-| Installation | depuis l'interface de Home Assistant, sans YAML | un fichier YAML et deux lignes dans `secrets.yaml` |
-| Passerelles et interfaces | toutes, détectées | toutes, détectées |
-| Températures | toutes les sondes | la première sonde |
-| Baux DHCP, alertes | oui | non |
-| Redémarrer, arrêter | oui (selon les privilèges) | en option (`rest_command`) |
+| Installation | through the Home Assistant interface, without YAML | one YAML file and two lines in `secrets.yaml` |
+| Gateways et interfaces | toutes, détectées | toutes, détectées |
+| Temperatures | all sensors | the first sensor |
+| DHCP leases, alerts | yes | no |
+| Reboot, arrêter | oui (selon les privilèges) | en option (`rest_command`) |
 
-**Conseil** : l'intégration est la plus simple et la plus complète. Le package sert si vous ne voulez pas, ou ne pouvez pas, installer d'intégration HACS. N'utilisez pas les deux en même temps (les capteurs seraient en double).
+**Tip** : the integration is the simplest and most complete option. Use the package if you do not want to, or cannot, install the HACS integration. Do not use both at the same time (this would create duplicate sensors).
 
-> La carte n'appelle pas l'API d'OPNsense elle-même : le navigateur bloquerait ces appels (CORS, certificat auto-signé), et la clé d'API serait lisible par tous ceux qui ouvrent le tableau de bord. C'est toujours Home Assistant qui interroge OPNsense.
+> The card does not call the OPNsense API directly: the browser would block these requests (CORS, self-signed certificate), and the API key would be readable by anyone opening the dashboard. Home Assistant always queries OPNsense.
 
-## Installation de la carte
+## Installing the card
 
-### Avec HACS (recommandé)
+### With HACS (recommended)
 
-1. Dans HACS, cherchez **Carte OPNsense** et installez-la.
-2. Rechargez la page (Ctrl+F5).
+1. In HACS, search for **Carte OPNsense** and install it.
+2. Refresh the page (Ctrl+F5).
 
-Si la carte n'apparaît pas encore dans la recherche de HACS, ajoutez le dépôt à la main : menu **⋮** → **Dépôts personnalisés**, adresse `https://github.com/Marlboro62/opnsense-card`, type **Tableau de bord** (Dashboard), puis cherchez **Carte OPNsense**.
+If the card does not appear in HACS search yet, add the repository manually: menu **⋮** → **Custom repositories**, URL `https://github.com/Marlboro62/opnsense-card`, type **Tableau de bord** (Dashboard), then search for **Carte OPNsense**.
 
-### Manuellement
+### Manually
 
-1. Téléchargez [`opnsense-card.js`](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/opnsense-card.js) (clic droit → Enregistrer sous) et copiez-le dans `/config/www/`.
-2. **Paramètres → Tableaux de bord → ⋮ → Ressources → Ajouter une ressource** : URL `/local/opnsense-card.js`, type **Module JavaScript**.
-3. Rechargez la page (Ctrl+F5).
+1. Download [`opnsense-card.js`](https://raw.githubusercontent.com/Marlboro62/opnsense-card/main/opnsense-card.js) (right-click → Save as) and copy it to `/config/www/`.
+2. **Paramètres → Tableaux de bord → ⋮ → Resources → Ajouter une ressource** : URL `/local/opnsense-card.js`, type **JavaScript module**.
+3. Refresh the page (Ctrl+F5).
 
-Puis ajoutez la carte :
+Then add the card:
 
 ```yaml
 type: custom:opnsense-card
 ```
 
-La carte a un **éditeur visuel**.
+The card has a **visual editor**.
 
-## Avec l'intégration OPNsense (HACS)
+## With the OPNsense integration (HACS)
 
-1. Dans OPNsense, **Système → Accès → Utilisateurs** : créez un utilisateur pour Home Assistant et sa **clé d'API** (icône de clé). Les privilèges nécessaires sont décrits dans la [documentation de l'intégration](https://github.com/travisghansen/hass-opnsense#readme).
-2. Dans HACS, installez **OPNsense** ([travisghansen/hass-opnsense](https://github.com/travisghansen/hass-opnsense)), puis redémarrez Home Assistant.
-3. **Paramètres → Appareils et services → Ajouter une intégration → OPNsense** : adresse du pare-feu, clé et secret.
+1. In OPNsense, **System → Access → Users** : create a user for Home Assistant and its **clé d'API** (key icon). The required privileges are described in the [documentation de l'intégration](https://github.com/travisghansen/hass-opnsense#readme).
+2. In HACS, install **OPNsense** ([travisghansen/hass-opnsense](https://github.com/travisghansen/hass-opnsense)), then restart Home Assistant.
+3. **Settings → Devices & services → Add integration → OPNsense** : URL du pare-feu, clé et secret.
 
-La carte trouve seule le pare-feu ; avec plusieurs pare-feu, choisissez-le dans l'éditeur (`device`). Les débits des interfaces et l'état des passerelles sont activés par défaut dans l'intégration ; les compteurs (octets, paquets, erreurs) et les autres disques sont désactivés par défaut, la carte n'en a pas besoin.
+The card automatically detects the firewall; if you have multiple firewalls, select one in the editor (`device`). Les interface traffic rates et l'état des passerelles sont activés par défaut to l'intégration ; les compteurs (octets, paquets, erreurs) et les autres disks sont désactivés par défaut, la carte n'en a pas besoin.
 
-## Sans intégration : le package REST
+## Without integration: the REST package
 
-Le fichier [`packages/opnsense.yaml`](packages/opnsense.yaml) crée les capteurs avec l'intégration REST de base de Home Assistant. **Seule l'adresse du pare-feu est à indiquer** : toutes les passerelles et toutes les interfaces sont lues automatiquement, et la carte calcule elle-même les débits.
+Le fichier [`packages/opnsense.yaml`](packages/opnsense.yaml) creates sensors using Home Assistant's built-in REST integration. **Seule l'URL du pare-feu est à indiquer** : toutes les passerelles et toutes les interfaces are read automatically, and the card calculates traffic rates itself.
 
-1. **Dans OPNsense**, **Système → Accès → Utilisateurs** : créez un utilisateur dédié (par exemple `homeassistant`), avec ces privilèges (champ de recherche pour les trouver, les noms peuvent être traduits) :
+1. **Dans OPNsense**, **System → Access → Users** : create a dedicated user (for example `homeassistant`), with these privileges (use the search field to find them; names may be translated):
 
-   | Privilège | Pour |
+   | Privilege | Purpose |
    | --- | --- |
-   | `Lobby: Dashboard` | mémoire, disque, table d'états, tampons, swap, température, uptime, charge |
+   | `Lobby: Dashboard` | mémoire, disk, table d'états, tampons, swap, température, uptime, charge |
    | `Diagnostics: System Activity` | CPU |
-   | `Reporting: Traffic` | débits des interfaces |
-   | `System: Gateways` | état, latence et pertes des passerelles |
-   | `System: Firmware` (facultatif) | version et mise à jour |
+   | `Reporting: Traffic` | interface traffic rates |
+   | `System: Gateways` | gateway status, latency, and packet loss |
+   | `System: Firmware` (optional) | version et mise à jour |
 
-   `System: Gateways` et `System: Firmware` permettent aussi de **modifier** les passerelles et de lancer une mise à jour : sans `System: Firmware`, retirez le bloc « Version d'OPNsense » du package. Créez ensuite la **clé d'API** de cet utilisateur (icône de clé) : OPNsense télécharge un fichier avec la clé et le secret.
+   `System: Gateways` et `System: Firmware` also allow you to **modify** gateways and start an update: without `System: Firmware`, remove the “OPNsense version” block from the package. Then create the **clé d'API** de cet utilisateur (key icon) : OPNsense downloads a file containing the key and secret.
 2. **Dans `/config/secrets.yaml`** :
 
    ```yaml
-   opnsense_api_key: "la clé"
-   opnsense_api_secret: "le secret"
+   opnsense_api_key: "the key"
+   opnsense_api_secret: "the secret"
    ```
 
-3. Copiez [`opnsense.yaml`](packages/opnsense.yaml) dans `/config/packages/`, et activez les packages dans `configuration.yaml` si ce n'est pas déjà fait :
+3. Copy [`opnsense.yaml`](packages/opnsense.yaml) to `/config/packages/`, et activez les packages to `configuration.yaml` if you have not already done so:
 
    ```yaml
    homeassistant:
      packages: !include_dir_named packages
    ```
 
-4. Dans le fichier, remplacez partout `https://192.168.1.1` par l'adresse de votre OPNsense (« Remplacer tout »).
-5. **Outils de développement → YAML → Vérifier la configuration**, puis redémarrez Home Assistant.
+4. In the file, replace every occurrence of `https://192.168.1.1` par l'URL de votre OPNsense (« Remplacer tout »).
+5. **Developer Tools → YAML → Check configuration**, then restart Home Assistant.
 
-La carte trouve ces capteurs toute seule. Les débits s'affichent au deuxième relevé (15 secondes), ou tout de suite si l'historique du capteur `sensor.opnsense_traffic` existe déjà.
+The card automatically detects these sensors. Traffic rates appear after the second reading (15 seconds), or immediately if the history of sensor `sensor.opnsense_traffic` already exists.
 
-Latence, pertes et gigue d'une passerelle ne s'affichent que si sa **surveillance** est active dans OPNsense (**Système → Passerelles → Configuration**, décocher « Désactiver la surveillance de la passerelle » et indiquer une **IP de surveillance**, par exemple `1.1.1.1`) ; sinon la carte indique « sans surveillance ».
+A gateway's latency, packet loss, and jitter are displayed only if its **surveillance** est active to OPNsense (**Système → Gateways → Configuration**, uncheck “Disable Gateway Monitoring” and specify a **monitoring IP**, for example `1.1.1.1`) ; otherwise the card displays “not monitored”.
 
-**Redémarrer et Arrêter** : les boutons n'apparaissent que si vous décommentez le bloc `rest_command` en bas du package et donnez à l'utilisateur les privilèges `Diagnostics: Reboot System` et `Diagnostics: Halt system`. Sans cela, l'utilisateur d'API ne peut pas couper le pare-feu.
+**Reboot et Shut down** : the buttons appear only if you uncomment the block `rest_command` at the bottom of the package and grant the user the privileges `Diagnostics: Reboot System` et `Diagnostics: Halt system`. Otherwise, the API user cannot shut down the firewall.
 
-Les adresses de l'API du package sont celles d'OPNsense 25.7 et plus récent ; pour une version plus ancienne, le haut du fichier indique les noms à changer.
+Les URLs de l'API du package sont celles d'OPNsense 25.7 et plus récent ; pour une version plus ancienne, le haut du fichier indique les noms à changer.
 
 ## Options
 
-| Option | Rôle | Défaut |
+| Option | Purpose | Default |
 | --- | --- | --- |
-| `title`, `icon`, `icon_color` | En-tête | nom du pare-feu, `mdi:wall-fire` |
-| `device` | Pare-feu affiché (intégration) | le premier trouvé |
-| `prefix` | Package REST : début du nom des capteurs, si vous les avez renommés | `opnsense` |
-| `interfaces` | Interfaces affichées (nom, par exemple `WAN`, `LAN`) | toutes |
-| `show_info`, `show_resources`, `show_gateways`, `show_interfaces`, `show_actions` | Afficher chaque partie | `true` |
-| `theme` | `v2` (bleu nuit MyElectricalData), `auto` (clair ou sombre selon Home Assistant) ou `ha` (thème Home Assistant) | `v2` |
+| `title`, `icon`, `icon_color` | Header | nom du pare-feu, `mdi:wall-fire` |
+| `device` | Displayed firewall (integration) | the first one found |
+| `prefix` | REST package: prefix of sensor names, if you renamed them | `opnsense` |
+| `interfaces` | Interfaces affichées (nom, for example `WAN`, `LAN`) | all |
+| `show_info`, `show_resources`, `show_gateways`, `show_interfaces`, `show_actions` | Show each section | `true` |
+| `theme` | `v2` (MyElectricalData midnight blue), `auto` (light or dark depending on Home Assistant) ou `ha` (Home Assistant theme) | `v2` |
 
-Exemple :
+Example:
 
 ```yaml
 type: custom:opnsense-card
-title: Pare-feu
+title: Firewall
 interfaces:
   - WAN
   - LAN
@@ -167,28 +167,28 @@ show_actions: false
 
 ## Support
 
-Questions et problèmes : uniquement via les [issues GitHub](https://github.com/Marlboro62/opnsense-card/issues).
+Questions and issues: use only the [issues GitHub](https://github.com/Marlboro62/opnsense-card/issues).
 
-## Voir aussi
+## See also
 
 [Cartes Serveur HA](https://github.com/Marlboro62/serveur-ha-card) · [Carte Onduleur UPS](https://github.com/Marlboro62/onduleur-ups-card) · [Carte Enedis Linky New](https://github.com/Marlboro62/content-card-linky-new)
 
-## Licence
+## License
 
 MIT
 
-## Nom du projet et forks
+## Project name and forks
 
-Ce dépôt est la seule source officielle de **Carte OPNsense** (releases, HACS, support),
-maintenu par [Marlboro62](https://github.com/Marlboro62).
+This repository is the only official source for **OPNsense Card** (releases, HACS, support),
+maintained by [Marlboro62](https://github.com/Marlboro62).
 
-La licence MIT autorise à copier, modifier et redistribuer le code. Si vous publiez une version modifiée :
+The MIT license allows you to copy, modify, and redistribute the code. If you publish a modified version:
 
-- gardez les mentions de copyright du fichier [`LICENSE`](https://github.com/Marlboro62/opnsense-card/blob/main/LICENSE) (© Marlboro62) ;
-- **donnez-lui un autre nom** et d'autres types de carte (`custom:opnsense-card` sont ceux de ce dépôt) :
-  Home Assistant ne peut pas charger deux cartes du même type, et personne ne doit confondre les deux versions dans HACS ;
-- ne la présentez pas comme la version officielle et n'orientez pas vers ce dépôt les demandes
-  de support qui concernent votre version.
+- keep the copyright notices in the file [`LICENSE`](https://github.com/Marlboro62/opnsense-card/blob/main/LICENSE) (© Marlboro62) ;
+- **give it a different name** and different card types (`custom:opnsense-card` are the ones used by this repository) :
+  Home Assistant ne peut pas charger deux cartes du même type, et personne ne doit confondre les deux versions to HACS ;
+- do not present it as the official version or direct requests to this repository
+  for support relating to your version.
 
-Une correction ou une idée ? Les **pull requests** et les **issues** sont les bienvenues ici :
-elles profitent à tous les utilisateurs.
+A fix or an idea? **Pull requests** and **issues** are welcome here: **pull requests** et les **issues** sont les bienvenues ici :
+they benefit all users.
