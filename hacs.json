@@ -1,5 +1,5 @@
 {
-  "name": "Carte OPNsense",
+  "name": "OPNsense Card",
   "filename": "opnsense-card.js",
   "render_readme": true,
   "homeassistant": "2024.1.0"
